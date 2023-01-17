@@ -1,27 +1,39 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&display=swap');
+:root{
+    --gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --gradient1: linear-gradient(135deg, #667eea86 0%, #764ba28e 100%);
+    --url-img:url('/images/background.jpg');
+    --box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
+    --width:100%;
+    --radius:8px;
+}
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-.body{
-    background-image: url('/images/background.jpg');
+body{
+    background-image: var(--gradient1), var(--url-img);
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
     font-family: 'Raleway', sans-serif;
 }
 
 .container{
-    width:350px;
-    background: rgb(255, 255, 255);
+    width:400px;
+    background: #ffffff;
     height: auto;
     display: flex;
     flex-direction: column;
-    margin:0 auto;
-    padding:20px;
+    margin:70px auto;
+    padding:30px 20px 40px;
     margin-top: 100px;
-    box-shadow: 5px 5px 10px;
+    box-shadow: var(--box-shadow);
     text-align: center;
+    border-radius: var(--radius);
 }
 .form_text{
     width: 100%;
@@ -30,22 +42,37 @@
     margin-bottom:15px;
     outline: none;
     border: 1px solid blue;
+    padding-left: 5px;
+}
+.title{
+    margin-bottom: 40px;
+    font-size: 2rem;
 }
 
 .area{
     height: 150px;
-    min-width:100%;
-    max-width:100%;
-    min-height: 200px;
-    max-height:200px;
+    min-width:var(--width);
+    max-width:var(--width);
+    min-height: 150px;
+    max-height:150px;
+    font-family: inherit;
+    padding-top:15px;
 }
 .boton{
-    text-decoration: none;
-    background-color:rgb(15, 121, 170);
-    color:#fff;
-    cursor: pointer;
-    padding: 10px 30px;
-    display:inline-block;
+    display: block;
+    padding: 15px 30px;
     margin-top:10px;
+    width: 100%;
+    font-size:18px;
+    background-image: var(--gradient);
+    border:none;
+    outline: none;
+    color:#ffffff;
+    font-weight: 700;
+    cursor: pointer;
     
+}
+.boton:hover{
+    background-image: var(--gradient1);
+    transition:  background-image .3s;
 }
