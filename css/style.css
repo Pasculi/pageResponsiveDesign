@@ -76,3 +76,16 @@ body{
     background-image: var(--gradient1);
     transition:  background-image .3s;
 }
+
+@media screen and (max-width: 425px){
+    .container{
+        width: 300px;
+        background-color: #e8e8eb;
+    }
+    .title{
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size:20px;
+        color:rgb(0, 110, 255);
+
+    }
+}
